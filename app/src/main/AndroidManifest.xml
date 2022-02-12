@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WCEGuru">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.Material3.Dark.NoActionBar"
-            android:exported="true">
+            android:name=".views.activities.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.activities.OnBoardingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

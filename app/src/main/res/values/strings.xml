@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WCEGuru</string>
+    <string name="connect">Connect</string>
+    <string name="connect_description">This is sample text\nThis is line 2\nThis is line 3\nThis is line 4</string>
+    <string name="ellipse_16">ellipse_16</string>
+    <string name="ellipse_17">ellipse_17</string>
+    <string name="ellipse_19">ellipse_19</string>
+    <string name="ellipse_20">ellipse_20</string>
 </resources>
