@@ -6,13 +6,150 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fl_header_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ellipse_16"
+                android:layout_marginStart="-300dp"
+                android:layout_marginTop="-100dp"
+                android:rotation="-30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ellipse_17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="-50dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="-20"
+            android:translationX="-80dp"
+            android:translationY="-60dp"
+            android:layout_marginEnd="-88dp"
+            android:layout_marginBottom="20dp"
+            app:blk_cornerRadius="32dp"
+            app:blk_blurRadius="20"
+            app:blk_downscaleFactor="0.1"
+            app:blk_fps="0" />
+
+
+    </FrameLayout>
+
     <TextView
+        android:id="@+id/tv_connect_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Connect"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_header_image" />
+
+
+    <TextView
+        android:id="@+id/tv_app_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="This is sample text\nThis is line 2\nThis is line 3\nThis is line 4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_connect_text"
+        android:layout_marginStart="32dp"
+        android:textSize="16sp"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ellipse_19"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ellipse_18"
+                android:layout_marginEnd="-32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <io.alterac.blurkit.BlurLayout
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:blk_cornerRadius="32dp"
+            app:blk_blurRadius="20"
+            app:blk_downscaleFactor="0.1"
+            app:blk_fps="0">
+
+
+        </io.alterac.blurkit.BlurLayout>
+
+
+
+
+
+
+    </FrameLayout>
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
